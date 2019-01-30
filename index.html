@@ -31,14 +31,25 @@
         <div class="col-md-2">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
+              <div class="panel-heading">Search On</div>
               <div class="panel-body">
                 <form>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+
+                         <option value="datesearch">Search date</option>
+                          <input class="form-control" id="searchdate" type="text" placeholder="Enter Date" onkeyup="funcFilterDate">
+
+                          <option value="citysearch">Search city</option>
+                          <input class="form-control" id="searchcity" type="text" placeholder="Enter City">
+
+                          <option value="statesearch">Search state</option>
+                          <input class="form-control" id="searchstate" type="text" placeholder="Enter State" onkeyup="funcFilterState">
+
+                          <option value="shapesearch">Search shape</option>
+                          <input class="form-control" id="searchshape" type="text" placeholder="Enter Shape">
+                          
                       </li>
                     </ul>
                   </div>
@@ -49,8 +60,8 @@
           </aside>
         </div>
         <div class="col-md-10">
-          <div id="table-area" class="">
-            <table border = "1" id="ufo-table" class="table table-striped">
+          <div id="table-area" class=""><H1 align="center">Sightings Data</H1>
+            <table border="2" id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
                   <th class="table-head">Date</th>
@@ -63,7 +74,6 @@
                 </tr>
               </thead>
               <tbody>
-
               </tbody>
             </table>
           </div>
